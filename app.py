@@ -9,29 +9,29 @@ st.title("Titanic Survival Prediction App")
 # =============================
 # MODEL SELECTION
 # =============================
-# model_name = st.selectbox(
-#     "Select Model",
-#     ["logistic", "decision_tree", "knn",
-#      "naive_bayes", "random_forest", "xgboost"]
-# )
+model_name = st.selectbox(
+    "Select Model",
+    ["logistic", "decision_tree", "knn",
+     "naive_bayes", "random_forest", "xgboost"]
+)
 
 # =============================
 # LOAD MODEL & SCALER (CACHED)
 # =============================
-# @st.cache_resource
-# def load_artifacts(model_name):
-#     model = joblib.load(f"model/saved_models/{model_name}.pkl")
-#     scaler = joblib.load("model/saved_models/scaler.pkl")
-#     return model, scaler
-#
-# model, scaler = load_artifacts(model_name)
 @st.cache_resource
-def load_artifacts():
-    model = joblib.load("model/saved_models/logistic.pkl")
+def load_artifacts(model_name):
+    model = joblib.load(f"model/saved_models/{model_name}.pkl")
     scaler = joblib.load("model/saved_models/scaler.pkl")
     return model, scaler
 
-model, scaler = load_artifacts()
+# model, scaler = load_artifacts(model_name)
+# @st.cache_resource
+# def load_artifacts():
+#     model = joblib.load("model/saved_models/logistic.pkl")
+#     scaler = joblib.load("model/saved_models/scaler.pkl")
+#     return model, scaler
+#
+# model, scaler = load_artifacts()
 
 
 # =============================
