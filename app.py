@@ -24,15 +24,9 @@ def load_artifacts(model_name):
     scaler = joblib.load("model/saved_models/scaler.pkl")
     return model, scaler
 
-# model, scaler = load_artifacts(model_name)
-# @st.cache_resource
-# def load_artifacts():
-#     model = joblib.load("model/saved_models/logistic.pkl")
-#     scaler = joblib.load("model/saved_models/scaler.pkl")
-#     return model, scaler
-#
-# model, scaler = load_artifacts()
 
+# LOAD MODEL & SCALER
+model, scaler = load_artifacts(model_name)
 
 # =============================
 # FILE UPLOAD
