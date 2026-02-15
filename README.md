@@ -21,12 +21,19 @@ information. The target variable is Survived (binary classification).
 
 
 ## Model Observations
+| Model | Performance | Overfitting Risk | Interpretability |
+|------|------------|------------------|------------------|
+| Logistic Regression | Moderate | Low | High |
+| Decision Tree | High (Train) | High | Very High |
+| KNN | Moderate | Medium | Low |
+| Naive Bayes | Moderate | Low | Medium |
+| Random Forest | High | Low | Medium |
+| XGBoost | Very High | Low | Low |
 
-| Model | Observation |
-|-----|-------------|
-| Logistic Regression | Interpretable baseline |
-| Decision Tree | Overfits without pruning |
-| KNN | Sensitive to scaling |
-| Naive Bayes | Fast but assumption-heavy |
-| Random Forest | Strong generalization |
-| XGBoost | Best overall performance |
+---
+
+## Conclusion
+Random Forest and XGBoost demonstrated superior predictive performance compared to other models.  
+Logistic Regression served as a reliable baseline, while Naive Bayes provided efficient probabilistic classification.
+
+---
