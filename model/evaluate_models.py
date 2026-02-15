@@ -15,7 +15,7 @@ from sklearn.metrics import (
 # =============================
 # LOAD DATASET
 # =============================
-df = pd.read_csv("titanic.csv")
+df = pd.read_csv("train.csv")
 
 # =============================
 # HANDLE MISSING VALUES (NO inplace)

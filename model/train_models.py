@@ -12,7 +12,7 @@ from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 
 # Load dataset
-df = pd.read_csv("titanic.csv")
+df = pd.read_csv("train.csv")
 
 # -------------------------
 # Feature Engineering
